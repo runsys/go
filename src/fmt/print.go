@@ -835,6 +835,7 @@ func (p *pp) printValue(value reflect.Value, verb rune, depth int) {
 		if p.fmt.sharpV {
 			p.buf.writeString(f.Type().String())
 		}
+  p.but.writeString(value.Type().String())
 		p.buf.writeByte('{')
 		for i := 0; i < f.NumField(); i++ {
 			if i > 0 {
