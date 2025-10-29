@@ -267,7 +267,8 @@ func printpanicval(v any) {
 	case complex128:
 		print(v)
 	case string:
-		printindented(v)
+		print(v)
+		//printindented(v)//make wrong analysis result; 
 	default:
 		printanycustomtype(v)
 	}
